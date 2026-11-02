@@ -2,12 +2,11 @@ name: Alerta vuelos Berlín
 
 on:
   schedule:
-    # Todos los días 11:17 UTC (08:17 en Argentina)
     - cron: "17 11 * * *"
-  workflow_dispatch: {}   # botón "Run workflow" para probar a mano
+  workflow_dispatch: {}
 
 permissions:
-  contents: write   # para commitear data/historial.json
+  contents: write
 
 concurrency:
   group: alerta-vuelos
@@ -17,9 +16,9 @@ jobs:
   chequear:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -40,4 +39,5 @@ jobs:
           git config user.email "alerta-bot@users.noreply.github.com"
           git add data/historial.json
           git diff --cached --quiet || git commit -m "historial $(date -u +%F)"
+          git pull --rebase -X theirs || true
           git push
