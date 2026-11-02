@@ -76,6 +76,8 @@ def combinaciones_de_hoy(cfg: dict, hoy: date) -> list[tuple[str, str]]:
     # (no 8 días seguidos) y en ~total/n días se cubra todo.
     total = len(todas)
     grupos = max(1, -(-total // n))
+    while len(cfg["origenes"]) > 1 and grupos % len(cfg["origenes"]) == 0:
+        grupos += 1
     turno = hoy.toordinal() % grupos
     return [todas[i] for i in range(turno, total, grupos)][:n]
 
