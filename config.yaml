@@ -1,0 +1,40 @@
+# Configuración de la alerta de vuelos a Berlín
+destino: BER
+
+# Orígenes a vigilar. MDZ incluido: a veces el pasaje con el tramo Mendoza
+# incluido sale igual o más barato y te protege si perdés la conexión.
+origenes:
+  - EZE
+  - SCL
+  # - MDZ   # descomentá para sumarlo (consume más búsquedas)
+
+# Ventana de fechas de salida (solo ida)
+fecha_desde: "2027-04-01"
+fecha_hasta: "2027-05-31"
+
+moneda: USD
+idioma: es
+
+# Cuántas búsquedas (origen + fecha) hacer por corrida.
+# Plan gratis de SerpApi = 250 búsquedas/mes -> 8 por día entra holgado.
+busquedas_por_corrida: 8
+
+# ¿Qué es una oferta? Se avisa si se cumple CUALQUIERA de estas reglas:
+reglas:
+  # 1) Precio absoluto máximo (con tu base de USD 709, 600 ≈ -15 %)
+  precio_maximo: 600
+  # 2) % por debajo de la mediana de lo que viene observando el bot
+  #    (solo se aplica cuando hay suficientes datos para ese origen)
+  porcentaje_bajo_mediana: 15
+  min_observaciones_mediana: 15
+  # 3) Google lo marca como "bajo" Y además está por debajo de su rango típico
+  usar_price_insights_google: true
+
+# Máximo de escalas aceptado (null = cualquiera)
+max_escalas: 2
+
+# Aerolíneas a excluir (ej. si sabés que su tarifa no incluye valija)
+aerolineas_excluidas: []
+
+# No repetir aviso para el mismo origen+fecha salvo que baje al menos esto
+bajada_minima_para_reavisar: 20
