@@ -1256,6 +1256,76 @@
     "British Airways"
    ],
    "price_level": "low"
+  },
+  {
+   "fecha_consulta": "2026-11-15",
+   "origen": "EZE",
+   "fecha_vuelo": "2027-04-06",
+   "precio": 1042,
+   "aerolineas": [
+    "British Airways"
+   ],
+   "price_level": "typical"
+  },
+  {
+   "fecha_consulta": "2026-11-15",
+   "origen": "SCL",
+   "fecha_vuelo": "2027-04-14",
+   "precio": 709,
+   "aerolineas": [
+    "British Airways"
+   ],
+   "price_level": "low"
+  },
+  {
+   "fecha_consulta": "2026-11-15",
+   "origen": "EZE",
+   "fecha_vuelo": "2027-04-23",
+   "precio": 1031,
+   "aerolineas": [
+    "Turkish Airlines"
+   ],
+   "price_level": "typical"
+  },
+  {
+   "fecha_consulta": "2026-11-15",
+   "origen": "SCL",
+   "fecha_vuelo": "2027-05-01",
+   "precio": 709,
+   "aerolineas": [
+    "British Airways"
+   ],
+   "price_level": "low"
+  },
+  {
+   "fecha_consulta": "2026-11-15",
+   "origen": "EZE",
+   "fecha_vuelo": "2027-05-10",
+   "precio": 1042,
+   "aerolineas": [
+    "British Airways"
+   ],
+   "price_level": "typical"
+  },
+  {
+   "fecha_consulta": "2026-11-15",
+   "origen": "SCL",
+   "fecha_vuelo": "2027-05-18",
+   "precio": 709,
+   "aerolineas": [
+    "British Airways"
+   ],
+   "price_level": "low"
+  },
+  {
+   "fecha_consulta": "2026-11-15",
+   "origen": "EZE",
+   "fecha_vuelo": "2027-05-27",
+   "precio": 1042,
+   "aerolineas": [
+    "British Airways"
+   ],
+   "price_level": "typical"
   }
  ],
  "alertas": {
